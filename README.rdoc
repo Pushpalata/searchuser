@@ -9,12 +9,12 @@ Requires Ruby 1.9.2 or higher.
   
 Does not require Database
 
-```Steps
-<br>
+Steps
+
 Checkout the repository
-<br>
+
 bundle install
-<br>
+
 rails s
 
 Example:
