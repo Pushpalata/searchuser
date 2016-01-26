@@ -9,9 +9,10 @@ Requires Ruby 1.9.2 or higher.
   
 Does not require Database
 
-```Checkout the repository
-```bundle install
-```rails s
+```Steps
+Checkout the repository
+bundle install
+rails s
 
 Example:
 
