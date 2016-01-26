@@ -1,0 +1,93 @@
+- report.each do |source, result|
+  %h1
+    = source.titlecase
+  - if result.present?
+    %table{:width => "100%"}
+      %tr
+        %th
+          User
+        %th
+          Description
+        %th
+          Joining Date
+      %tr
+        %td
+          = result["user"][:handle]
+        %td
+          = result["user"][:description]
+        %td
+          = result["user"][:joining_date]
+    - if source == "twitter"
+      %table{:width => "100%"}
+        %thead
+          %tr
+            %th{:colspan => "2"}
+              %h3 Tweets
+          %tr
+            %th{:width => "20%"}
+              Tweet
+            %th{:width => "20%"}
+              Date
+        %tbody
+          - result["tweets"].each do |item|
+            %tr
+              %td
+                = item[:tweet]
+              %td    
+                = item[:tweet_date]
+    - elsif source == "github"
+      %table{:width => "100%"}
+        %thead
+          %tr
+            %th{:colspan => "2"}
+              %h3 Repositories
+          %tr
+            %th{:width => "20%"}
+              Name
+            %th{:width => "20%"}
+              Description
+            %th{:width => "20%"}
+              Github Link
+            %th{:width => "20%"}
+              Created Date
+        %tbody
+          - result["repositories"].each do |item|
+            %tr
+              %td
+                = item[:name]
+              %td    
+                = item[:description]
+              %td    
+                = item[:url]
+              %td    
+                = item[:created_at]
+    - elsif source == "rubygem"
+      %table{:width => "100%"}
+        %thead
+          %tr
+            %th{:colspan => "2"}
+              %h3 Gems
+          %tr
+            %th{:width => "20%"}
+              Name
+            %th{:width => "20%"}
+              Version
+            %th{:width => "20%"}
+              Description
+            %th{:width => "20%"} 
+              RubyGem Link
+            %th{:width => "20%"}
+              Created Date
+        %tbody
+          - result["gems"].each do |item|
+            %tr
+              %td
+                = item[:name]
+              %td
+                = item[:version]
+              %td    
+                = item[:description]
+              %td    
+                = item[:url]
+              %td    
+                = item[:created_at]

@@ -1,0 +1,7 @@
+- if @report.present?
+  .download-options
+    = link_to "Download DOC", dashboard_index_path(:format => :docx, :user_name => params[:user_name])
+    | 
+    = link_to "Download XLS", dashboard_index_path(:format => :xls, :user_name => params[:user_name])
+  = get_source_vise_content(@report)
+

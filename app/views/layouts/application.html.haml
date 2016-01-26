@@ -1,0 +1,19 @@
+!!!
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title= content_for?(:title) ? yield(:title) : "Search User"
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header.header
+      .l-wrap--header
+        %a.header__logo-wrap{:href => "/", :title => "Searching...."}
+          %span.header__logo{"data-icon" => "⬡"} ⬢
+        .header__nav-links-wrap
+          %nav.header__nav-links
+            %a.header__nav-link{:href => "/"} About
+    %main
+      = yield

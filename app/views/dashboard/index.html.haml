@@ -1,0 +1,11 @@
+.home__image-wrap
+  .home__image
+%h1.home__heading Find By Username
+.home__search-wrap
+  = form_tag dashboard_index_path, :method => :get, :remote => true  do |f|
+    = text_field_tag :user_name, params[:user_name], :placeholder => "Search Gems…", :id => "home_query", :class => "home__search"
+    = submit_tag "Search", :class => "home__join"
+#loading-overlay    
+.home__result#fetch_result
+  - if @response.present?
+    = render :partial => "search_result"

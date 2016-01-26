@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    background-color: #35A2B7;
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+.header {
+    -webkit-transform: translateZ(0);
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+main {
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.l-colspan--l, .l-colspan--r, .l-col--l, .l-col--l--pad, .l-col--r, .l-col--r--pad, .l-half--l, .l-half--r, .home__join, .help__link--new-discussion, .help__category__link--new-discussion, .form__input, .form__textarea, .form__file__label, .gem__pre, .gems__nav-link, .header__nav-link, .help__footer__articles-wrap, .help__footer__discussions-wrap, .home__downloads, .home__link, .modal__input-wrap, .post__link--posts, .header__search-wrap, .header__search-wrap--home, .header__search, .help__search, .statuses, .status__twitter, .uptime__definitions, .uptime__credits {
+    box-sizing: border-box;
+}
+
+.header__logo-wrap {
+    position: relative;
+    float: left;
+    z-index: 1;
+}
+.header__nav-links-wrap {
+    position: absolute;
+}
+.header__logo {
+    position: absolute;
+    font-family: "icomoon";
+    color: white;
+    speak: none;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.t-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.header__nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+.home__image-wrap {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.home__heading {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: 90%;
+    font-weight: 200;
+    line-height: 1.2;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+.home__search-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: 90%;
+    max-width: 780px;
+    margin-bottom:20px;
+}
+.home__search {
+    margin-bottom: 45px;
+    padding-right: 48px;
+    box-shadow: 0 0 0px 5px rgba(20, 28, 34, .1);
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+}
+.header__search, .home__search {
+    -webkit-appearance: none;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 300;
+    color: #141c22;
+    outline: none;
+}
+.home__search__icon {
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: "icomoon";
+    color: #35A2B7;
+}
+.header__search__icon, .home__search__icon {
+    position: absolute;
+    cursor: pointer;
+}
+.home__cta-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: 90%;
+    max-width: 200px;
+}
+.home__downloads {
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    color: white;
+}
+.home__downloads__desc {
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.home__join:before {
+    position: absolute;
+    right: 18px;
+    line-height: 22px;
+}
+.home__join {
+    width: 250px;
+    background-color: white;
+    color: #35A2B7;
+    text-align:center;
+    margin: 0 auto;
+}
+.home__join, .form__submit {
+    -webkit-appearance: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: border-color, background-color;
+    transition-property: border-color, background-color;
+}
+.home__links {
+    margin-right: auto;
+    margin-left: auto;
+}
+#loading-overlay{
+  position:absolute;
+  height: 765px;
+  width: 100%;
+  opacity: 0.3;
+  z-index: 100;
+  background: #000000 url(/assets/loading.gif) no-repeat center center;
+  display:none;
+}
+div#fetch_result {
+    background-color: #eee;
+    border-top: 5px solid #0f0f0f;
+    padding: 10px 30px;
+    position:relative;
+}
+.download-options {
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 0 0 5px 5px;
+    top: 0;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #0f0f0f;
+}
+#fetch_result h1 {
+    text-transform: capitalize;
+    color: #4f4f4f;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+#fetch_result ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#fetch_result ul li:first-child{
+    border: none;
+    padding-top: 0;
+}
+#fetch_result ul li{
+    clear: left;
+    border-top: 1px solid #ddd;
+    padding: 6px 10px;
+}
+#fetch_result a {
+    color: #000;
+    font-weight: bold;
+}
+#fetch_result .small {
+    font-weight: bold;
+    color: #999;
+    font-size: 12px;
+}
+.clear{clear:both;display:block;}
+.source_content, .user_info{min-height:50px;}
+.source_content{margin-bottom:10px;}
+.source_content .contain{text-transform: capitalize;
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;}
+.social-content .item-header{position:relative;}
+.social-content .item-header img{
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    -moz-force-broken-image-icon: 1;
+}
+.social-content .item-header img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.social-content .item-header span.account {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #8899a6;
+    margin-left:58px;
+}
+.social-content .item-header span.account strong{
+  font-size: 13px;
+  font-weight: bold;
+    color: #292f33;
+}
+.social-content .item-header span.account span{
+  font-size: 13px;
+  color: #8899a6;
+  margin-left:5px;
+}
+.social-content p.description, strong.join{
+  margin-left:58px;
+}
+/*Media CSS*/
+@media (min-width: 600px){
+.home__links {
+    width: 461px;
+}
+
+}
+@media (min-width: 520px){
+  .home__downloads {
+    padding-right: 20px;
+    width: 188px;
+    float: left;
+    border-right: 1px solid #ab262b;
+}
+
+}
+@media (min-width: 900px){
+  .home__heading {
+    margin-bottom: 60px;
+    padding-top: 30px;
+    max-width: 780px;
+    font-size: 60px;
+  }
+  .home__image {
+    background-position: center bottom;
+  }
+  .home__cta-wrap {
+    margin-bottom: 160px;
+}
+
+}
+@media (min-width: 1200px){
+  .l-wrap--header {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+@media (min-width: 1020px){
+  .l-wrap--header {
+    position: relative;
+    max-width: 1100px;
+  }
+  .header {
+    height: 68px;
+  }
+  .header__logo-wrap {
+    top: 12px;
+    font-size: 40px;
+  }
+  .header__club-sandwich {
+    display: none;
+  }
+  .header__nav-links-wrap {
+    width: 100%;
+  }
+  .header__logo {
+    line-height: 45px;
+  }
+  .header__nav-links {
+    float: right;
+  }
+  .header__nav-link {
+    display: inline-block;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 25px 0 26px 0;
+    border-bottom: 5px solid transparent;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+  }
+  .header__nav-link:focus, .header__nav-link:hover {
+    box-shadow: inset 0 5px 0 0 #ffffff;
+  }
+}
+
