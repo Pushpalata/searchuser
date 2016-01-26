@@ -3,8 +3,18 @@
 # SearchUsername
 SearchUsername is a simple application to see user information with username.
 
-url
+https://searchusername.herokuapp.com/
 
 Requires Ruby 1.9.2 or higher.
   
 Does not require Database
+
+```Checkout the repository
+```bundle install
+```rails s
+
+Example:
+
+Searching by "Pushpalata_C"
+Will give you twiiter,rubygem and github result for user name "Pushpalata_C"
+
