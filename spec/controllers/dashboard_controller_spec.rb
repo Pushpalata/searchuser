@@ -23,6 +23,11 @@ RSpec.describe DashboardController, type: :controller do
       get :index, { :user_name => "test", :format => :xls }
       expect(response.content_type).to eq "application/xls"
     end
+    
+    it "responds to Doc" do
+      get :index, { :user_name => "test", :format => :docx }
+      expect(response.content_type).to eq "application/docx"
+    end
   end
   
   describe "should search for user" do
@@ -45,6 +50,18 @@ RSpec.describe DashboardController, type: :controller do
       # the response should be in json format
       expect(response.content_type).to eq "application/json"
     end
+    
+    it 'should be valid response' do
+      #Fetch response for user
+      #should contain node "id" or "error"
+      #if id received valid user
+      #if error received no user present
+    end
+    
+    it 'fetch repositories' do 
+      # If user present then only fetch repositories
+      # else show "No User Present"
+    end
   end
   
   #should check data fetch from rubygem
@@ -62,6 +79,38 @@ RSpec.describe DashboardController, type: :controller do
       # the response should be in json format
       expect(response.content_type).to eq "application/json"
     end
+    
+    it 'should be valid response' do
+      #Fetch response for user
+      #should contain node "id" or "error"
+    end
+    
+    it "should fetch gems when user present" do
+      # If user present then only fetch gems
+      # else show "No user Present"
+    end
+  end
+  
+  #check twitter setup
+  describe 'Fetch data from twitter' do
+    it 'Check twitter setup' do 
+      # check Twitter credentials
+    end
+    
+    it 'should content json response' do
+      # check for json response
+    end
+    
+    it 'Fetch tweets when user present' do
+      get :index, { :user_name => "Pushpalata"}
+      # fetch user
+      it "fetch tweets" do 
+        # If user present then only fetch tweets
+        #else show "No user Present"
+      end
+    end
+  end
+    
   end
   
 end
